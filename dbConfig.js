@@ -13,6 +13,8 @@ const config = {
   port: parseInt(process.env.DB_PORT, 10) || 1433
 };
 
+console.log('Database Config:', config);
+
 // Create a connection pool
 const poolPromise = new sql.ConnectionPool(config)
   .connect()
@@ -24,7 +26,7 @@ const poolPromise = new sql.ConnectionPool(config)
     console.error('Database connection failed!', err);
     throw err;
   });
-
+  console.log('Database Config:', config);
 module.exports = {
   sql,
   poolPromise
