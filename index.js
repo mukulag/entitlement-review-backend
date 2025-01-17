@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 3000;
 // Middleware to parse JSON requests
 app.use(express.json());
 
+require('dotenv').config();
+
 // Sample route for testing
 app.get('/', (req, res) => {
   res.send('Entitlement Review System Backend is Running!');
