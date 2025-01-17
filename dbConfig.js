@@ -1,6 +1,7 @@
 const sql = require('mssql');
 
 // Database configuration
+require('dotenv').config();
 const config = {
   user: process.env.DB_USER,        // Database username
   password: process.env.DB_PASSWORD, // Database password

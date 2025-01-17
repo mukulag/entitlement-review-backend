@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware to parse JSON requests
 app.use(express.json());
 
-require('dotenv').config();
+console.log('Environment Variables:', process.env);
 
 // Sample route for testing
 app.get('/', (req, res) => {
